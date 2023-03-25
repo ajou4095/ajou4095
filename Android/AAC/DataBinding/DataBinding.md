@@ -1,62 +1,76 @@
-# DataBinding
----
-layout xml ¿¡¼­ ¼±¾ğÇü ¹æ½ÄÀ¸·Î µ¥ÀÌÅÍ¸¦ Observe ÇØ ¹İ¿µÇÏ°Ô ÇØÁÖ´Â AAC ¶óÀÌºê·¯¸®ÀÌ´Ù.
+DataBinding ì€ layout xml ì—ì„œ ì„ ì–¸í˜• ë°©ì‹ìœ¼ë¡œ ë°ì´í„°ë¥¼ Observe í•´ ë°˜ì˜í•˜ê²Œ í•´ì£¼ëŠ” AAC ë¼ì´ë¸ŒëŸ¬ë¦¬ì´ë‹¤.
 
-### ÀåÁ¡
----
-- ¿ÉÀú¹ö ÆĞÅÏ
-  Activity / Fragment ÀÇ View ¾÷µ¥ÀÌÆ® Ã¥ÀÓÀ» ºĞ¸®ÇÒ ¼ö ÀÖ´Ù.
-  - SRP : Activity °¡ System °ü·Ã Ã¥ÀÓ¸¸À» °¡Áú ¼ö ÀÖµµ·Ï µµ¿ÍÁØ´Ù.
-  - OCP : µ¥ÀÌÅÍ¸¦ notify ÇÏ´Â º»ÁúÀûÀÎ ºÎºĞÀº º¯°æÇÏÁö ¾ÊÀ¸¸ç, notify ¸¦ ¹Ş¾ÒÀ» ¶§¿¡ ´ëÇÑ Çàµ¿ÀÌ Ãß»óÈ­µÈ´Ù. µû¶ó¼­ µ¥ÀÌÅÍ¸¦ ¾î¶»°Ô °¡°øÇÏ°í ¾î¶»°Ô ¾÷µ¥ÀÌÆ®ÇÏ´ÂÁö¿¡ °üÇÑ ºÎºĞ¸¸ ÀÛ¼ºÇÏ¸é µÈ´Ù.
-- ¼±¾ğÇü ÇÁ·Î±×·¡¹Ö
-  xml ¿¡¼­ ¸ğµç View ¿¡ °üÇÑ ¾÷µ¥ÀÌÆ® ·ÎÁ÷À» °¡Áö°í ÀÖ¾î È­¸é¿¡ ´ëÇÑ ¿¹ÃøÀÌ ½¬¿öÁø´Ù.
-  - SRP : xml ¿¡¼­´Â View°¡ ¾î¶² ¾÷µ¥ÀÌÆ®¸¦ ÇØ¾ßÇÏ´ÂÁö¿¡ ´ëÇÑ Ã¥ÀÓÀ» °¡Áö°í, BindingAdapter/BindingMethod ¿¡¼­ ½ÇÁ¦ ·ÎÁ÷¿¡ °üÇÑ Ã¥ÀÓÀ» °¡Á®°£´Ù.
+# ì¥ì 
+- ì˜µì €ë²„ íŒ¨í„´
+  Activity / Fragment ì˜ View ì—…ë°ì´íŠ¸ ì±…ì„ì„ ë¶„ë¦¬í•  ìˆ˜ ìˆë‹¤.
+  - SRP : Activity ê°€ System ê´€ë ¨ ì±…ì„ë§Œì„ ê°€ì§ˆ ìˆ˜ ìˆë„ë¡ ë„ì™€ì¤€ë‹¤.
+  - OCP : ë°ì´í„°ë¥¼ notify í•˜ëŠ” ë³¸ì§ˆì ì¸ ë¶€ë¶„ì€ ë³€ê²½í•˜ì§€ ì•Šìœ¼ë©°, notify ë¥¼ ë°›ì•˜ì„ ë•Œì— ëŒ€í•œ í–‰ë™ì´ ì¶”ìƒí™”ëœë‹¤. ë”°ë¼ì„œ ë°ì´í„°ë¥¼ ì–´ë–»ê²Œ ê°€ê³µí•˜ê³  ì–´ë–»ê²Œ ì—…ë°ì´íŠ¸í•˜ëŠ”ì§€ì— ê´€í•œ ë¶€ë¶„ë§Œ ì‘ì„±í•˜ë©´ ëœë‹¤.
+- ì„ ì–¸í˜• í”„ë¡œê·¸ë˜ë°
+  xml ì—ì„œ ëª¨ë“  View ì— ê´€í•œ ì—…ë°ì´íŠ¸ ë¡œì§ì„ ê°€ì§€ê³  ìˆì–´ í™”ë©´ì— ëŒ€í•œ ì˜ˆì¸¡ì´ ì‰¬ì›Œì§„ë‹¤.
+  - SRP : xml ì—ì„œëŠ” Viewê°€ ì–´ë–¤ ì—…ë°ì´íŠ¸ë¥¼ í•´ì•¼í•˜ëŠ”ì§€ì— ëŒ€í•œ ì±…ì„ì„ ê°€ì§€ê³ , BindingAdapter/BindingMethod ì—ì„œ ì‹¤ì œ ë¡œì§ì— ê´€í•œ ì±…ì„ì„ ê°€ì ¸ê°„ë‹¤.
 
-### ViewBinding
----
-Activity / Fragment ¿¡¼­ View ¿¡ ´ëÇÑ Á¢±ÙÀ» ÇØ¾ßÇÒ ¶§, ±âÁ¸¿¡´Â ViewÀÇ ID ¸¦ ÅëÇØ Ã£¾Æ¿Í¾ß Çß´Ù. (`findViewById`)
-ViewBinding À» ÀÌ¿ëÇØ xmlÀ» ÄÚµå·Î ±¸ÇöÇÑ ViewDataBinding °´Ã¼¸¦ ¸¸µé ¼ö ÀÖ´Ù.
-ÀÌ¸¦ ÀÌ¿ëÇØ °Ë»öÇÏÁö ¾Ê°í Á÷Á¢ View ¿¡ ´ëÇÑ Á¢±ÙÀÌ °¡´ÉÇØÁ³°í, ÀÌ¿¡ µû¶ó View ¸¦ ´õ ºü¸£°Ô, null-safety ÇÏ°Ô °¡Á®¿Ã ¼ö ÀÖ°Ô µÇ¾ú´Ù.
-ViewBinding Àº DataBinding ¿¡ ¼ÓÇØÀÖ´Â ¶óÀÌºê·¯¸®´Ù.
-µû¶ó¼­ DataBinding »ç¿ë ½Ã ViewBinding µµ »ç¿ëÇÒ ¼ö ÀÖÁö¸¸, ViewBinding ¸¸À» µû·Î »ç¿ëÇÒ ¼öµµ ÀÖ´Ù.
+# ViewBinding
+Activity / Fragment ì—ì„œ View ì— ëŒ€í•œ ì ‘ê·¼ì„ í•´ì•¼í•  ë•Œ, ê¸°ì¡´ì—ëŠ” Viewì˜ ID ë¥¼ í†µí•´ ì°¾ì•„ì™€ì•¼ í–ˆë‹¤. (`findViewById`)
 
-### Á¾¼Ó ¼±¾ğ ¹æ¹ı
----
+ViewBinding ì„ ì´ìš©í•´ xmlì„ ì½”ë“œë¡œ êµ¬í˜„í•œ ViewDataBinding ê°ì²´ë¥¼ ë§Œë“¤ ìˆ˜ ìˆë‹¤.
+
+ì´ë¥¼ ì´ìš©í•´ ê²€ìƒ‰í•˜ì§€ ì•Šê³  ì§ì ‘ View ì— ëŒ€í•œ ì ‘ê·¼ì´ ê°€ëŠ¥í•´ì¡Œê³ , ì´ì— ë”°ë¼ View ë¥¼ ë” ë¹ ë¥´ê²Œ, null-safety í•˜ê²Œ ê°€ì ¸ì˜¬ ìˆ˜ ìˆê²Œ ë˜ì—ˆë‹¤.
+
+ViewBinding ì€ DataBinding ì— ì†í•´ìˆëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬ë‹¤.
+
+ë”°ë¼ì„œ DataBinding ì‚¬ìš© ì‹œ ViewBinding ë„ ì‚¬ìš©í•  ìˆ˜ ìˆì§€ë§Œ, ViewBinding ë§Œì„ ë”°ë¡œ ì‚¬ìš©í•  ìˆ˜ë„ ìˆë‹¤.
+
+# ì¢…ì† ì„ ì–¸ ë°©ë²•
 ```
 buildFeatures {
     dataBinding = true
 }
 ```
-Gradle ¿¡¼­ À§¿Í °°ÀÌ `dataBinding = true` ¿É¼ÇÀ» ÁÖ¸é Á¾¼Ó¼º Ãß°¡°¡ µÈ´Ù.
-Application ¸ğµâ¿¡¼­ ÇÏÀ§ ¸ğµâµéÀÇ DataBinderMapper À» ¸ğ¾Æ °ü¸®ÇÏ±â ¶§¹®¿¡,
-library ¸ğµâ¿¡¼­ DataBinding À» »ç¿ëÇÒ °æ¿ì ÇØ´ç ¸ğµâ Á¾¼Ó¼ºÀ» °¡Áö°í ÀÖ´Â ¸ğµç »óÀ§ ¸ğµâµéÀº DataBinding È°¼ºÈ­¸¦ ÇØ¾ß ÇÑ´Ù.
+Gradle ì—ì„œ ìœ„ì™€ ê°™ì´ `dataBinding = true` ì˜µì…˜ì„ ì£¼ë©´ ì¢…ì†ì„± ì¶”ê°€ê°€ ëœë‹¤.
 
-### »ç¿ë¹ı
----
-xml ¿¡¼­ ÃÖ»ó´ÜÀ» <layout> ÅÂ±×·Î ¹­¾î DataBinding À» »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+Application ëª¨ë“ˆì—ì„œ í•˜ìœ„ ëª¨ë“ˆë“¤ì˜ DataBinderMapper ì„ ëª¨ì•„ ê´€ë¦¬í•˜ê¸° ë•Œë¬¸ì—,
 
-### ÀÚÁÖÇÏ´Â ½Ç¼ö
----
-- DataBinding Event Listener
-> BindingAdapter / BindingMethod ·Î lambda functionÀ» ¸¸µé °æ¿ì, ±×¸®°í ÇÑ xml ¿¡¼­ µÎ°³ ÀÌ»óÀÇ lambda function BindingAdapter / BindingMethod ¸¦ ¿¬°áÇÑ °æ¿ì ºôµå ¿¡·¯°¡ ¹ß»ıÇÑ´Ù.
-[°ü·Ã ¸µÅ©](!https://stackoverflow.com/questions/54692274/android-data-binding-problem-missing-return-statement-in-generated-code-while-u)
-DataBinding À¸·Î ÀÌº¥Æ®¸¦ ÇÚµé¸µÇÏ°íÀÚ ÇÒ ¶§¿¡´Â lambda function ÀÌ ¾Æ´Ñ interface / abstract class ¸¦ ÀÌ¿ëÇØ ¸¸µé¾î¾ß ÇÑ´Ù.
+library ëª¨ë“ˆì—ì„œ DataBinding ì„ ì‚¬ìš©í•  ê²½ìš° í•´ë‹¹ ëª¨ë“ˆ ì¢…ì†ì„±ì„ ê°€ì§€ê³  ìˆëŠ” ëª¨ë“  ìƒìœ„ ëª¨ë“ˆë“¤ì€ DataBinding í™œì„±í™”ë¥¼ í•´ì•¼ í•œë‹¤.
 
-- DataBinding Kotlin File
-> xml ¿¡¼­´Â java ·Î º¯È¯µÈ ÆÄÀÏ¿¡ Á¢±ÙÇÏ±â ¶§¹®¿¡ ÁÖÀÇÇØ¾ßÇÑ´Ù.
-Companion Object ¿¡ Á¢±ÙÇÒ ¶§¿¡´Â .Companion
-Object class ¿¡ Á¢±ÙÇÒ ¶§¿¡´Â .INSTANCE ¿Í °°ÀÌ °¡Á®¿Í¾ß ÇÑ´Ù.
-databinding ¹®¹ıµµ javaÀÎµ¥, ÀÌ·Î ÀÎÇØ DataBinding ½Ã non-nullable ¿¡ null °ªÀ» Àü´ŞÇØ NPE °¡ ¹ß»ıÇÑ´Ù.
-½ÇÁ¦·Î `androidx.databinding.adapters.Converters` ¿¡ ÀÖ´Â BindingConversion À» »ç¿ëÇÒ °æ¿ì ³»ºÎ¿¡¼­ null Ã³¸®¸¦ ÇÏ°í ÀÖÁö ¾Ê±â ¶§¹®¿¡ NullPointerException ÀÌ ¹ß»ıÇÒ ¼ö ÀÖ´Ù.
-±×·¡¼­ ÇÊÀÚ´Â DataBinding À» ÇÒ ¶§¿¡´Â µ¥ÀÌÅÍ¸¦ nullable ÇÏ°Ô ¹ŞÀ» ¼ö ÀÖµµ·Ï ¸¸µå´Â °É ÃßÃµÇÑ´Ù.
+# ì‚¬ìš©ë²•
+xml ì—ì„œ ìµœìƒë‹¨ì„ `<layout>` íƒœê·¸ë¡œ ë¬¶ì–´ DataBinding ì„ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
 
-### Issue
----
-- ViewBinding in Module
-> ¾Èµå·ÎÀÌµå´Â ºôµåÅ¸ÀÓ¿¡ ¸ğµç xml À» ¸ğ¾Æ °ü¸®ÇÑ´Ù.
-ViewBinding °´Ã¼´Â inflate ÇÒ ¶§ ºôµåÅ¸ÀÓ¿¡ Application ¸ğµâ¿¡ ¸¸µé¾îÁö´Â `androidx.databinding.DataBinderMapperImpl` ¿¡ reflection À¸·Î Á¢±ÙÇÏ´Âµ¥,
-ÀÌ ¶§ Android Studio Layout Preview ¿¡¼­´Â ÇØ´ç °´Ã¼¸¦ °¡Á®¿ÀÁö ¸øÇÑ´Ù.
-ÇöÀç ÃßÃøÇÏ´Â ¹Ù·Î´Â layout xml ÀÌ ºôµåÅ¸ÀÓ ¶§ ÇÏ³ª·Î ÇÕÃÄÁö°í, ÀÌ¸¦ MergedDataBinderMapper ¿¡¼­ °ü¸®ÇÏ´Âµ¥,
-ÀÌ ¶§ ½ÇÁ¦ ¾îÇÃ¸®ÄÉÀÌ¼ÇÀÌ µ¹¾Æ°¥ ¶§ÀÇ xml À§Ä¡¿Í Layout Preview ¿¡¼­ÀÇ xml À§Ä¡°¡ ºÒÀÏÄ¡ÇÏ±â ¶§¹®À¸·Î ÃßÃøµÈ´Ù.
-[°ü·Ã ¸µÅ©](!https://issuetracker.google.com/u/3/issues/268597957)
-2023.03.25 ±âÁØ, Giraffe Canary ¿¡¼­µµ ÇØ´ç ¹®Á¦°¡ Áö¼ÓÀûÀ¸·Î ¹ß»ıÇÑ´Ù.
+# ìì£¼í•˜ëŠ” ì‹¤ìˆ˜
+### DataBinding Event Listener
+
+BindingAdapter / BindingMethod ë¡œ lambda functionì„ ë§Œë“¤ ê²½ìš°, ê·¸ë¦¬ê³  í•œ xml ì—ì„œ ë‘ê°œ ì´ìƒì˜ lambda function BindingAdapter / BindingMethod ë¥¼ ì—°ê²°í•œ ê²½ìš° ë¹Œë“œ ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤.
+
+[ê´€ë ¨ ë§í¬](!https://stackoverflow.com/questions/54692274/android-data-binding-problem-missing-return-statement-in-generated-code-while-u)
+
+DataBinding ìœ¼ë¡œ ì´ë²¤íŠ¸ë¥¼ í•¸ë“¤ë§í•˜ê³ ì í•  ë•Œì—ëŠ” lambda function ì´ ì•„ë‹Œ interface / abstract class ë¥¼ ì´ìš©í•´ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
+
+### DataBinding Kotlin File
+
+xml ì—ì„œëŠ” java ë¡œ ë³€í™˜ëœ íŒŒì¼ì— ì ‘ê·¼í•˜ê¸° ë•Œë¬¸ì— ì£¼ì˜í•´ì•¼í•œë‹¤.
+
+Companion Object ì— ì ‘ê·¼í•  ë•Œì—ëŠ” .Companion
+
+Object class ì— ì ‘ê·¼í•  ë•Œì—ëŠ” .INSTANCE ì™€ ê°™ì´ ê°€ì ¸ì™€ì•¼ í•œë‹¤.
+
+databinding ë¬¸ë²•ë„ javaì¸ë°, ì´ë¡œ ì¸í•´ DataBinding ì‹œ non-nullable ì— null ê°’ì„ ì „ë‹¬í•´ NPE ê°€ ë°œìƒí•œë‹¤.
+
+ì‹¤ì œë¡œ `androidx.databinding.adapters.Converters` ì— ìˆëŠ” BindingConversion ì„ ì‚¬ìš©í•  ê²½ìš° ë‚´ë¶€ì—ì„œ null ì²˜ë¦¬ë¥¼ í•˜ê³  ìˆì§€ ì•Šê¸° ë•Œë¬¸ì— NullPointerException ì´ ë°œìƒí•  ìˆ˜ ìˆë‹¤.
+
+ê·¸ë˜ì„œ í•„ìëŠ” DataBinding ì„ í•  ë•Œì—ëŠ” ë°ì´í„°ë¥¼ nullable í•˜ê²Œ ë°›ì„ ìˆ˜ ìˆë„ë¡ ë§Œë“œëŠ” ê±¸ ì¶”ì²œí•œë‹¤.
+
+# Issue
+### ViewBinding in Module
+
+ì•ˆë“œë¡œì´ë“œëŠ” ë¹Œë“œíƒ€ì„ì— ëª¨ë“  xml ì„ ëª¨ì•„ ê´€ë¦¬í•œë‹¤.
+
+ViewBinding ê°ì²´ëŠ” inflate í•  ë•Œ ë¹Œë“œíƒ€ì„ì— Application ëª¨ë“ˆì— ë§Œë“¤ì–´ì§€ëŠ” `androidx.databinding.DataBinderMapperImpl` ì— reflection ìœ¼ë¡œ ì ‘ê·¼í•˜ëŠ”ë°,
+
+ì´ ë•Œ Android Studio Layout Preview ì—ì„œëŠ” í•´ë‹¹ ê°ì²´ë¥¼ ê°€ì ¸ì˜¤ì§€ ëª»í•œë‹¤.
+
+í˜„ì¬ ì¶”ì¸¡í•˜ëŠ” ë°”ë¡œëŠ” layout xml ì´ ë¹Œë“œíƒ€ì„ ë•Œ í•˜ë‚˜ë¡œ í•©ì³ì§€ê³ , ì´ë¥¼ MergedDataBinderMapper ì—ì„œ ê´€ë¦¬í•˜ëŠ”ë°,
+
+ì´ ë•Œ ì‹¤ì œ ì–´í”Œë¦¬ì¼€ì´ì…˜ì´ ëŒì•„ê°ˆ ë•Œì˜ xml ìœ„ì¹˜ì™€ Layout Preview ì—ì„œì˜ xml ìœ„ì¹˜ê°€ ë¶ˆì¼ì¹˜í•˜ê¸° ë•Œë¬¸ìœ¼ë¡œ ì¶”ì¸¡ëœë‹¤.
+
+[ê´€ë ¨ ë§í¬](!https://issuetracker.google.com/u/3/issues/268597957)
+
+2023.03.25 ê¸°ì¤€, Giraffe Canary ì—ì„œë„ í•´ë‹¹ ë¬¸ì œê°€ ì§€ì†ì ìœ¼ë¡œ ë°œìƒí•œë‹¤.
