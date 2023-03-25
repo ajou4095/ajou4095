@@ -1,0 +1,29 @@
+4대 컴포넌트에 대한 설명
+
+Activity, Fragment 에 대한 설명
+
+Single Activity 에 대한 견해
+
+Activity onDestroy 가 안불리는 이유 [https://developer.android.com/guide/components/processes-and-threads](https://developer.android.com/guide/components/processes-and-threads)
+
+화면이 켜질 때 각각 Activity, Fragment 의 Lifecycle
+
+Fragment viewLifecycle 과 FragmentLifecycle 의 차이
+
+Fragment BackStack 일 때의 Lifecycle 상태
+
+Activity Recreation 사례와 동작과정
+
+cold start, warm start, hot start 에 대한 이해와 설명
+
+Serializable vs Parcelable
+
+SparseArray
+
+Dalvik & ART 에 대한 설명
+
+kt 에서 runtime 까지의 과정
+
+Android 에서 일어날 수 있는 Memory Leak 의 예시
+
+Memory Leak 를 발견하는 방법 (Leak Canary, Memory Profiler)

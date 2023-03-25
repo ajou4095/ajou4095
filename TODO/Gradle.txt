@@ -1,0 +1,13 @@
+# Gradle
+
+KMP (Kotlin Multi Platform)
+
+KSP (Kotlin Simple Processing)
+
+kapt
+
+AAR vs implementation
+
+Groovy DSL vs Kotlin DSL (Domain Specific Language)
+
+버전관리법 - buildSrc, Version Catalog

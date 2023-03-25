@@ -1,0 +1,9 @@
+Sync / Async / Blocking / NonBlocking 개념
+
+AsyncTask, Rx, Coroutine 장단점 및 차이점
+
+event bus
+
+멀티 쓰레드 환경에서 일어날 수 있는 문제와 방지법
+
+Thread Pool, Handler, Looper, ThreadPoolExecutor, etc.

@@ -1,0 +1,13 @@
+### CustomView
+
+@JvmOverloads 가 하는 일
+
+defStyle 이 하는 일
+
+onMeasure, onLayout 에 관한 설명
+
+MeasureSpec 에 관해서
+
+R 클래스에 대한 이해
+
+View ID 를 사용하는 이유와, 같은 View ID 를 가지고 있을 경우 일어날 수 있는 일 ([https://www.netguru.com/blog/how-to-correctly-save-the-state-of-a-custom-view-in-android](https://www.netguru.com/blog/how-to-correctly-save-the-state-of-a-custom-view-in-android))

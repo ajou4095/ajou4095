@@ -1,0 +1,13 @@
+### RecyclerView
+
+동작과정
+
+Adapter.type 이 하는 일
+
+### Image
+
+캐싱 전략 (lru?)
+
+### UI State 관리
+
+StateFlow, SharedFlow, LiveData, etc…

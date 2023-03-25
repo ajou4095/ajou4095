@@ -1,0 +1,19 @@
+
+Hilt - @AssistedInject  @Inject
+
+Hilt - @Provides @Binds
+
+Hilt - @EntryPoint @AndroidEntryPoint 
+
+Hilt - 동적으로 값을 바꾼다면 어떻게?
+
+Hilt - Qualifier
+
+Hilt - Reusable vs Singleton
+
+### ViewModel
+
+Activity 가 BackStack 에 있을 때 ViewModel 값이 사라질 수 있는가??
+[https://developer.android.com/topic/performance/memory-management](https://developer.android.com/topic/performance/memory-management)
+
+### Compose?

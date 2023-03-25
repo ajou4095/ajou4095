@@ -1,0 +1,17 @@
+sealed class vs enum class
+
+companion object, object class, java static 설명
+
+companion object GC에 잡히는지 설명 (+ LMK, OOM)
+
+static 이 메모리 어디에 상주하는지
+
+data class
+
+const 를 붙이는 이유
+
+by delegator
+
+@JvmStatic
+@JvmField
+@JvmOverloads
