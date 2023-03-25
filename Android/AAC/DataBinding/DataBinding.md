@@ -1,3 +1,4 @@
+# DataBinding
 DataBinding 은 layout xml 에서 선언형 방식으로 데이터를 Observe 해 반영하게 해주는 AAC 라이브러리이다.
 
 # 장점
@@ -40,7 +41,7 @@ xml 에서 최상단을 `<layout>` 태그로 묶어 DataBinding 을 사용할 �
 
 BindingAdapter / BindingMethod 로 lambda function을 만들 경우, 그리고 한 xml 에서 두개 이상의 lambda function BindingAdapter / BindingMethod 를 연결한 경우 빌드 에러가 발생한다.
 
-[관련 링크](!https://stackoverflow.com/questions/54692274/android-data-binding-problem-missing-return-statement-in-generated-code-while-u)
+[관련 링크](https://stackoverflow.com/questions/54692274/android-data-binding-problem-missing-return-statement-in-generated-code-while-u)
 
 DataBinding 으로 이벤트를 핸들링하고자 할 때에는 lambda function 이 아닌 interface / abstract class 를 이용해 만들어야 한다.
 
@@ -71,6 +72,6 @@ ViewBinding 객체는 inflate 할 때 빌드타임에 Application 모듈에 만�
 
 이 때 실제 어플리케이션이 돌아갈 때의 xml 위치와 Layout Preview 에서의 xml 위치가 불일치하기 때문으로 추측된다.
 
-[관련 링크](!https://issuetracker.google.com/u/3/issues/268597957)
+[관련 링크](https://issuetracker.google.com/u/3/issues/268597957)
 
 2023.03.25 기준, Giraffe Canary 에서도 해당 문제가 지속적으로 발생한다.
