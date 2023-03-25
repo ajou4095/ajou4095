@@ -45,6 +45,10 @@ BindingAdapter / BindingMethod 로 lambda function을 만들 경우, 그리고 �
 
 DataBinding 으로 이벤트를 핸들링하고자 할 때에는 lambda function 이 아닌 interface / abstract class 를 이용해 만들어야 한다.
 
+[Android 공식 문서 참고](https://developer.android.com/topic/libraries/data-binding/binding-adapters)
+
+`Event handlers may only be used with interfaces or abstract classes with one abstract method, as shown in the following`
+
 ### DataBinding Kotlin File
 
 xml 에서는 java 로 변환된 파일에 접근하기 때문에 주의해야한다.
