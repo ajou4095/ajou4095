@@ -1,7 +1,5 @@
 ## View Hierarchy
 
----
-
 ```kotlin
 class CustomView @JvmOverloads constructor(
     context: Context,
@@ -33,6 +31,8 @@ class CustomView @JvmOverloads constructor(
 
 그러나 root 의 onMeasure 을 override 할 수 있다는 강력한 장점이 있다.
 
-- 참고
+---
+
+### 참고
     
-    [https://pluu.github.io/blog/android/2020/08/16/widget-include-merge/](https://pluu.github.io/blog/android/2020/08/16/widget-include-merge/)
+[https://pluu.github.io/blog/android/2020/08/16/widget-include-merge/](https://pluu.github.io/blog/android/2020/08/16/widget-include-merge/)
