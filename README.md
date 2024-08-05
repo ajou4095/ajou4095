@@ -15,6 +15,7 @@
 # Project
 ### In Progress
 [Android Template](https://github.com/ajou4095/template-android) [![android-ci](https://github.com/ajou4095/template-android/actions/workflows/android-ci.yml/badge.svg?branch=main)](https://github.com/ajou4095/template-android/actions/workflows/android-ci.yml)
+
 [KTor Template](https://github.com/ajou4095/template-ktor) [![Android CI](https://github.com/ajou4095/template-ktor/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/ajou4095/template-ktor/actions/workflows/deploy.yml)
 
 [Hobby Weekly](https://github.com/hobbly-dev) - Private
